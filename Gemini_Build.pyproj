@@ -1,0 +1,47 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>cabf4662-752b-43e3-a7ca-d4810dde3859</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>Gemini_Build.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Gemini_Build</Name>
+    <RootNamespace>Gemini_Build</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="db_config.py" />
+    <Compile Include="Gemini_Build.py" />
+    <Compile Include="invoice_app.py" />
+    <Compile Include="invoice_data.py" />
+    <Compile Include="Main.py" />
+    <Compile Include="purchase_app.py" />
+    <Compile Include="purchase_entry_app.py" />
+    <Compile Include="purchase_form.py" />
+    <Compile Include="purchase_utils.py" />
+    <Compile Include="widgets\autocomplete_entry.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="widgets\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
